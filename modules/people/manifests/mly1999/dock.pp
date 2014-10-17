@@ -37,11 +37,11 @@ class people::mly1999::dock (
         action => 'remove',
     }
 
-    dockutil::item { 'Remove Calendar':
-        item   => '/Applications/Calendar.app',
-        label  => 'Calendar',
-        action => 'remove',
-    }
+#    dockutil::item { 'Remove Calendar':
+#        item   => '/Applications/Calendar.app',
+#        label  => 'Calendar',
+#        action => 'remove',
+#    }
 
     dockutil::item { 'Remove Reminders':
         item   => '/Applications/Reminders.app',

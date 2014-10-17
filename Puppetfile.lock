@@ -169,6 +169,11 @@ GITHUBTARBALL
     xquartz (1.2.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-xtrafinder
+  specs:
+    xtrafinder (1.0.1)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.1.1)
@@ -221,4 +226,5 @@ DEPENDENCIES
   vlc (= 1.1.0)
   vmware_fusion (= 1.2.0)
   xquartz (= 1.2.1)
+  xtrafinder (= 1.0.1)
 

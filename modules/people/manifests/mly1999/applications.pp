@@ -14,6 +14,7 @@ class people::mly1999::applications {
     include teamviewer
     include caffeine
     include appcleaner
+    include xtrafinder
 
     class { 'vmware_fusion': 
       version => '6.0.2-1398658', 
@@ -23,10 +24,11 @@ class people::mly1999::applications {
       update_version => '67',
     }
 
-#    class { 'eclipse::jee':
-#      version => 'SR2',
-#    }
+    class { 'eclipse::jee':
+      version => 'SR2',
+    }
 
+    include postgresql
 
     ### Homebrew packages ###
 
