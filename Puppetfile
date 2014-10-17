@@ -78,5 +78,4 @@ github "skype",			"1.0.9"
 github "teamviewer",		"1.0.1"
 github "java",			"1.7.1"
 github "eclipse",		"2.4.1"
-github "eclipse",		"3.0.0"
-
+github "sysctl",		"1.0.1"

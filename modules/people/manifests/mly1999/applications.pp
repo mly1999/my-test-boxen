@@ -21,14 +21,12 @@ class people::mly1999::applications {
     }
 
     class { 'java':
-      update_version => '67',
+      update_version => '71',
     }
 
-    class { 'eclipse::jee':
-      version => 'SR2',
-    }
-
-    include postgresql
+#    class { 'eclipse::jee':
+#      version => 'SR2',
+#    }
 
     ### Homebrew packages ###
 
@@ -39,5 +37,10 @@ class people::mly1999::applications {
     ]
 
     package { $homebrew_packages: }
+
+    package { 'Postgres':
+        provider => 'compressed_app',
+        source => 'https://github.com/PostgresApp/PostgresApp/releases/download/9.3.5.1/Postgres-9.3.5.1.zip',
+    }
 
 }
