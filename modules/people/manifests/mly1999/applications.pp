@@ -43,4 +43,19 @@ class people::mly1999::applications {
         source => 'https://github.com/PostgresApp/PostgresApp/releases/download/9.3.5.1/Postgres-9.3.5.1.zip',
     }
 
+    package { 'pgadmin3':
+        provider => 'appdmg_eula',
+        source => 'http://ftp.postgresql.org/pub/pgadmin3/release/v1.18.1/osx/pgadmin3-1.18.1.dmg',
+    }
+
+    package { 'JavaForOSX2014-001':
+        provider => 'pkgdmg',
+        source => 'http://support.apple.com/downloads/DL1572/en_US/JavaForOSX2014-001.dmg',
+    }
+
+# DOWNLOAD FAILS
+#    package { 'GPGTools':
+#        provider => 'pkgdmg',
+#        source   => 'https://releases.gpgtools.org/GPG%20Suite%20-%202013.10.22.dmg',
+#    }
 }
