@@ -3,4 +3,5 @@ class people::mly1999 {
     include people::mly1999::repositories
     include people::mly1999::config
     include people::mly1999::dock
+    include people::mly1999::params
 }
