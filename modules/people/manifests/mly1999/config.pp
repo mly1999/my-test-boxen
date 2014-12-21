@@ -4,6 +4,8 @@ class people::mly1999::config (
   $my_username  = $people::mly1999::params::my_username
 ) {
 
+  
+
   include osx::dock::autohide
   include osx::no_network_dsstores
   include osx::keyboard::capslock_to_control
@@ -13,6 +15,8 @@ class people::mly1999::config (
   include osx::global::expand_save_dialog
   include osx::finder::unhide_library
   include osx::finder::enable_quicklook_text_selection
+  include osx::finder::show_all_filename_extensions
+  inlcude osx::dock::disable_dashboard
 
   class { 'osx::dock::position':
     position => 'bottom',
@@ -31,12 +35,6 @@ class people::mly1999::config (
       user   => $::boxen_user,
       type   => 'int',
       value  => 6;
-    "disables Dashboard":
-      user   => $::boxen_user,
-      domain => 'com.apple.dashboard',
-      key    => 'mcx-disabled',
-      value  => true;
   }
-
 }
 

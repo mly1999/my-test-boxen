@@ -1,5 +1,4 @@
 class people::mly1999::applications {
-
     ### Puppet modules from https://github.com/boxen ###
 
     include chrome
@@ -29,29 +28,28 @@ class people::mly1999::applications {
 #    }
 
     ### Homebrew packages ###
-
     $homebrew_packages = [ 
         'wget', 
         'tmux', 
         'tree' 
     ]
-
     package { $homebrew_packages: }
 
+    ### Postgresql App and Workbench ###
     package { 'Postgres':
         provider => 'compressed_app',
-        source => 'https://github.com/PostgresApp/PostgresApp/releases/download/9.3.5.1/Postgres-9.3.5.1.zip',
+        source => 'https://github.com/PostgresApp/PostgresApp/releases/download/9.4.0.0/Postgres-9.4.0.0.zip',
     }
-
     package { 'pgadmin3':
         provider => 'appdmg_eula',
         source => 'http://ftp.postgresql.org/pub/pgadmin3/release/v1.18.1/osx/pgadmin3-1.18.1.dmg',
     }
 
-    package { 'JavaForOSX2014-001':
-        provider => 'pkgdmg',
-        source => 'http://support.apple.com/downloads/DL1572/en_US/JavaForOSX2014-001.dmg',
-    }
+
+#    package { 'JavaForOSX2014-001':
+#        provider => 'pkgdmg',
+#        source => 'http://support.apple.com/downloads/DL1572/en_US/JavaForOSX2014-001.dmg',
+#    }
 
 # DOWNLOAD FAILS
 #    package { 'GPGTools':
